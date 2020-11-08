@@ -18,9 +18,9 @@ extern class UARTClass Serial3;
 #endif
 
 /* BOARD  PIN DEFINE */
-/* LEDs (USE Builtin TX PIN led)*/
-#define PIN_LED              1
-#define LED_BUILTIN          1
+/* LEDs */
+#define PIN_LED              13
+#define LED_BUILTIN          13
 
 /* KEY */
 #define KEY0                 16
@@ -71,14 +71,14 @@ typedef struct _pwm_fpio_set_t{
     uint8_t inuse;
 }pwm_fpio_set_t;
 
-#define MD_PIN_MAP(fpio) (((fpio) < 17) ? _maixduino_pin_map[(fpio)] : (fpio))
+#define MD_PIN_MAP(fpio) _maixduino_pin_map[(fpio)]
 
-static const uint8_t _maixduino_pin_map[17] = {4, 5, 21, 22, 23, 24, 32, 15, 14, 13, 12, 11, 10, 3, 31, 30, 16};
+static const uint8_t _maixduino_pin_map[20] = {4, 5, 21, 22, 23, 24, 32, 15, 14, 13, 12, 11, 10, 3, 31, 30, 6, 7, 8, 16};
 
 #define ORG_PIN_MAP(org_pin) _original_pin_map[(org_pin)]
 
-static const uint8_t _original_pin_map[48] = {255, 255, 255, 13,  0,   1,   255, 255, 255, 255, 
-                                              12,  11,  10,  9,   8,   7,   16, 255, 255, 255, 
+static const uint8_t _original_pin_map[48] = {255, 255, 255, 13,  0,   1,   16,   17, 18,  255, 
+                                              12,  11,  10,  9,   8,   7,   16,  255, 255, 255, 
                                               255, 2,   3,   4,   5,   255, 255, 255, 255, 255, 
                                               15,  14,  6,   255, 255, 255, 255, 255, 255, 255, 
                                               255, 255, 255, 255, 255, 255, 255, 255};
