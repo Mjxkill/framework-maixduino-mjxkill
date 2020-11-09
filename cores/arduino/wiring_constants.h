@@ -64,6 +64,7 @@ enum BitOrder {
 #undef abs
 #endif // abs
 
+/*
 #ifndef min
 #define min(a,b) ((a)<(b)?(a):(b))
 #endif // min
@@ -71,6 +72,7 @@ enum BitOrder {
 #ifndef max
 #define max(a,b) ((a)>(b)?(a):(b))
 #endif // max
+*/
 
 #define abs(x) ((x)>0?(x):-(x))
 #define constrain(amt,low,high) ((amt)<(low)?(low):((amt)>(high)?(high):(amt)))
